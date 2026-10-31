@@ -123,4 +123,11 @@ Durante o desenvolvimento deste projeto, aprofundei meus conhecimentos em:
 - Organização e estruturação de projetos Python.
 - Apresentação de informações e relações entre variáveis por meio de gráficos.
 
+## Visualização dos Gráficos
+
+### Distribuição das Notas dos Produtos
+
+![Histograma das Notas](histograma_notas.png)
+
+
 Este projeto contribuiu para minha evolução prática em Python, análise de dados e visualização de informações.
