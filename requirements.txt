@@ -1,0 +1,8 @@
+pandas
+numpy
+plotly
+dash
+scipy
+statsmodels
+jupyter
+ipykernel
