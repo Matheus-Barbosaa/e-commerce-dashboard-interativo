@@ -71,8 +71,10 @@ e-commerce-dashboard-interativo/
 │
 ├── src/
 │   ├── app.py
-│   └── graficos.py
+│   ├── graficos.py
+│   └── gerar_dashboard.py
 │
+├── dashboard_interativo.html
 ├── .gitignore
 ├── README.md
 └── requirements.txt
@@ -80,7 +82,8 @@ e-commerce-dashboard-interativo/
 
 - `data/raw`: armazena o conjunto de dados original.
 - `notebooks`: contém o Jupyter Notebook utilizado para desenvolver e visualizar os gráficos.
-- `src`: reúne os arquivos Python responsáveis pelas funções gráficas e pela aplicação Dash.
+- `src`: reúne os arquivos Python responsáveis pelas funções gráficas, pela aplicação Dash e pela geração do dashboard em HTML.
+- `dashboard_interativo.html`: versão HTML dos gráficos, publicada pelo GitHub Pages.
 - `requirements.txt`: lista as bibliotecas necessárias para executar o projeto.
 - `.gitignore`: define os arquivos e pastas que não devem ser enviados ao GitHub.
 
@@ -111,6 +114,47 @@ http://127.0.0.1:8050/
 
 O dashboard será exibido localmente no navegador.
 
+## Publicação do Dashboard Interativo
+
+Durante o desenvolvimento deste projeto, identifiquei uma limitação na visualização dos gráficos Plotly diretamente pelo GitHub. Embora o notebook (`.ipynb`) permita visualizar os gráficos durante a execução local, sua pré-visualização no GitHub não apresenta todos os recursos interativos.
+
+Para solucionar essa limitação e permitir que outras pessoas visualizem os resultados do projeto, desenvolvi uma versão do dashboard em HTML e publiquei utilizando o GitHub Pages.
+
+### Por que essa solução foi adotada?
+
+O objetivo foi disponibilizar uma versão pública e interativa do dashboard, permitindo que visitantes do repositório explorem os gráficos sem precisar baixar o projeto ou executar o notebook localmente.
+
+**Acesse o dashboard:**
+
+[Visualizar Dashboard Interativo](https://matheus-barbosaa.github.io/e-commerce-dashboard-interativo/dashboard_interativo.html)
+
+### Processos realizados
+
+Para implementar essa solução, realizei as seguintes etapas:
+
+1. **Identificação da limitação:** verifiquei que a pré-visualização de notebooks no GitHub não apresentava adequadamente a interatividade dos gráficos Plotly.
+2. **Análise de alternativas:** busquei formas de disponibilizar os gráficos de maneira interativa para quem acessasse o repositório.
+3. **Criação do gerador HTML:** desenvolvi o arquivo `src/gerar_dashboard.py`, responsável por carregar os dados, utilizar as funções de gráficos já criadas e gerar o arquivo HTML.
+4. **Organização das visualizações:** mantive os sete gráficos do projeto, distribuídos em três seções:
+   - Distribuição e Características dos Produtos;
+   - Análise de Preços e Vendas;
+   - Análise de Correlação.
+5. **Geração do arquivo HTML:** o script exporta o dashboard para `dashboard_interativo.html`, na raiz do projeto.
+6. **Publicação no GitHub Pages:** configurei a publicação do arquivo HTML a partir da branch `main`, permitindo o acesso público pelo navegador.
+7. **Testes:** verifiquei o funcionamento dos sete gráficos, incluindo recursos de interação, zoom e visualização de informações ao passar o cursor.
+
+### Aprendizado e apoio durante o desenvolvimento
+
+Essa etapa representou um avanço na complexidade do projeto, pois exigiu conhecimentos além da criação e interpretação de gráficos. Foi necessário compreender como gerar um arquivo HTML, organizar as visualizações, trabalhar com caminhos de arquivos, versionar as alterações com Git e realizar a publicação pelo GitHub Pages.
+
+Ao identificar a limitação do GitHub para exibir os gráficos Plotly de forma interativa, recorri ao ChatGPT como ferramenta de apoio para encontrar uma alternativa e desenvolver uma solução que permitisse disponibilizar o dashboard em HTML por meio do GitHub Pages.
+
+Com as orientações recebidas, apliquei os ajustes necessários, acompanhei cada etapa e realizei os testes até conseguir publicar o dashboard e disponibilizar os gráficos interativos para outras pessoas.
+
+Essa experiência também me permitiu aprender, na prática, como superar dificuldades técnicas, utilizar ferramentas de apoio e transformar uma análise desenvolvida em Python em uma apresentação interativa acessível ao público.
+
+**O resultado foi a publicação de um dashboard que permite compartilhar as análises e demonstrar, na prática, os conhecimentos adquiridos em Python, Pandas, Plotly, Dash, HTML e GitHub.**
+
 ## Aprendizados
 
 Durante o desenvolvimento deste projeto, aprofundei meus conhecimentos em:
@@ -122,5 +166,6 @@ Durante o desenvolvimento deste projeto, aprofundei meus conhecimentos em:
 - Integração entre Jupyter Notebook e aplicações Dash.
 - Organização e estruturação de projetos Python.
 - Apresentação de informações e relações entre variáveis por meio de gráficos.
+- Geração de dashboards em HTML e publicação utilizando GitHub Pages.
 
 Este projeto contribuiu para minha evolução prática em Python, análise de dados e visualização de informações.
