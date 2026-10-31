@@ -10,6 +10,16 @@ Também desenvolvi uma organização modular das funções gráficas em Python, 
 
 O objetivo é aprofundar meus conhecimentos em análise de dados, visualização avançada, desenvolvimento web aplicado a dados e organização de projetos em Python.
 
+---
+
+## 🚀 Acesse o Dashboard Interativo
+
+Explore as visualizações desenvolvidas neste projeto diretamente pelo navegador.
+
+**[Visualizar Dashboard Interativo](https://matheus-barbosaa.github.io/e-commerce-dashboard-interativo/dashboard_interativo.html)**
+
+---
+
 ## Objetivo
 
 Desenvolver um dashboard interativo para explorar e visualizar informações de um conjunto de dados de e-commerce, utilizando Python, Plotly e Dash.
