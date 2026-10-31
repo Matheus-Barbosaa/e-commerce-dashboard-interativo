@@ -14,7 +14,7 @@ from graficos import (
 )
 
 # Carregamento do dataset
-df = pd.read_csv('data/raw/ecommerce_estatistica.csv')
+df = pd.read_csv('../data/raw/ecommerce_estatistica.csv')
 
 def cria_app():
     app = Dash(__name__)
